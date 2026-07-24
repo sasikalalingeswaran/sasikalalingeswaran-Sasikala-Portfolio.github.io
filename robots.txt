@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sasikalamyportfolio.netlify.app/sitemap.xml
