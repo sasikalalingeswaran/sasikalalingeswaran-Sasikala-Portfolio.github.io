@@ -1,12 +1,4 @@
-/*==========================
-    GOOGLE FONT
-==========================*/
-
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-
-/*==========================
-        RESET
-==========================*/
 
 *{
     margin:0;
@@ -57,10 +49,6 @@ section{
     border-radius:10px;
 }
 
-/*==========================
-        NAVBAR
-==========================*/
-
 header{
     position:fixed;
     width:100%;
@@ -108,10 +96,6 @@ header{
     color:white;
 }
 
-/*==========================
-        HERO
-==========================*/
-
 .hero{
 
     min-height:100vh;
@@ -152,10 +136,6 @@ header{
     color:#cbd5e1;
     margin-bottom:35px;
 }
-
-/*==========================
-        BUTTONS
-==========================*/
 
 .hero-btn{
 
@@ -202,13 +182,10 @@ header{
   background-color: rgba(255,255,255,0.4);
   transition: width 0.25s ease;
 }
+
 .btn-outline:hover::after {
   width: 100%;
 }
-
-/*==========================
-    SOCIAL ICONS
-==========================*/
 
 .social-icons{
 
@@ -235,10 +212,6 @@ header{
     color:white;
 }
 
-/*==========================
-    HERO IMAGE
-==========================*/
-
 .hero-image{
 
     flex:1;
@@ -261,9 +234,6 @@ header{
 
     transform:scale(1.05);
 }
-/*==========================
-        ABOUT
-==========================*/
 
 .about{
     background:#111827;
@@ -335,10 +305,6 @@ header{
     color:#ffffff;
 }
 
-/*==========================
-        SKILLS
-==========================*/
-
 .skills{
     background:#0f172a;
 }
@@ -354,11 +320,17 @@ header{
     padding:35px 20px;
     border-radius:15px;
     text-align:center;
-    transition:.4s;
     cursor:pointer;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: popup linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .skill-card:hover{
+    animation-play-state: paused;
     transform:translateY(-10px);
     background:#273549;
 }
@@ -380,10 +352,6 @@ header{
     font-size:15px;
 }
 
-/*==========================
-        PROJECTS
-==========================*/
-
 .projects{
     background:#111827;
 }
@@ -399,6 +367,12 @@ header{
     border-radius:15px;
     overflow:hidden;
     transition:.4s;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: popup linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .project-card:hover{
@@ -410,6 +384,12 @@ header{
     width:100%;
     height:220px;
     object-fit:cover;
+    transition: all 0.3s ease;
+}
+
+.project-card img:hover{
+    transform: scale(1.1);
+
 }
 
 .project-content{
@@ -428,10 +408,6 @@ header{
     margin-bottom:20px;
 }
 
-/*==========================
-      TECH STACK TAGS
-==========================*/
-
 .tech-stack{
     display:flex;
     flex-wrap:wrap;
@@ -447,10 +423,6 @@ header{
     font-size:14px;
 }
 
-/*==========================
-    PROJECT BUTTONS
-==========================*/
-
 .project-btn{
     display:flex;
     gap:15px;
@@ -461,9 +433,6 @@ header{
     padding:10px 22px;
     font-size:15px;
 }
-/*==========================
-        EDUCATION
-==========================*/
 
 .education{
     background:#0f172a;
@@ -481,6 +450,12 @@ header{
     border-radius:15px;
     transition:.3s;
     border-left:5px solid #38bdf8;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: popup linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .education-card:hover{
@@ -512,10 +487,6 @@ header{
     color:#38bdf8;
 }
 
-/*==========================
-      CERTIFICATES
-==========================*/
-
 .certificates{
     background:#111827;
 }
@@ -532,6 +503,12 @@ header{
     border-radius:15px;
     text-align:center;
     transition:.3s;
+    opacity: 0;
+    transform: scale(0.7);
+    animation: popup linear forwards;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+    transition: transform 0.3s ease, background 0.3s ease;
 }
 
 .certificate-card:hover{
@@ -552,10 +529,6 @@ header{
 .certificate-card p{
     color:#cbd5e1;
 }
-
-/*==========================
-        CONTACT
-==========================*/
 
 .contact{
     background:#0f172a;
@@ -630,10 +603,6 @@ header{
     outline: none;
 }
 
-/*==========================
-        FOOTER
-==========================*/
-
 footer{
     background:#035e85;
     text-align:center;
@@ -675,9 +644,16 @@ footer{
     color:white;
 }
 
-/*==========================
-      RESPONSIVE DESIGN
-==========================*/
+@keyframes popup{
+    from{
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
 
 @media(max-width:992px){
 
